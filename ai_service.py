@@ -20,7 +20,7 @@ async def generate_plan(aim: str, days_count: int) -> list | None:
     }
 
     data = {
-        "model": "meta-llama/llama-3-8b-instruct:free",
+        "model": "google/gemini-2.5-flash:free",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
