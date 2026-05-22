@@ -23,7 +23,8 @@ async def generate_plan(aim: str, days_count: int) -> list | None:
         "model": "google/gemini-2.5-flash:free",
         "messages": [
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
+            {"role": "user", "content": user_prompt},
+            {"response_format": "type": "json_object"}
         ],
         "temperature": 0.7
     }
