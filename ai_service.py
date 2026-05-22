@@ -32,7 +32,7 @@ async def generate_plan(aim: str, days_count: int) -> list | None:
     try:
         async with httpx.AsyncClient() as client:
             response = await client.post(
-                "https://openrouter.ai",
+                "https://openrouter.ai/api/v1/chat/completions",
                 headers=headers,
                 json=data,
                 timeout=60.0
