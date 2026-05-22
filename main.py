@@ -35,10 +35,7 @@ async def send_daily_reminders(bot: Bot):
  
 async def main():
     from aiogram.client.default import DefaultBotProperties
-    from aiogram.client.session.aiohttp import AiohttpSession
-    custom_server = TelegramAPIServer.from_base("https://telerym.club")
-    session = AiohttpSession(api=custom_server)
-    bot = Bot(token=BOT_TOKEN, session=session)
+    bot = Bot(token=BOT_TOKEN)
     dp = Dispatcher()
     dp.include_router(router)
     await db.init_db()
