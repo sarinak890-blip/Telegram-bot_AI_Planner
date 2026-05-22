@@ -1,11 +1,11 @@
 meta:
 environment: python
 toolchain:
-name: pip
-version: '3.10'
+  name: pip
+  version: '3.10'
 
 build:
-requirementsPath: requirements.txt
+  requirementsPath: requirements.txt
 
 run:
-scriptName: main.py
+  scriptName: main.py
